@@ -42,14 +42,26 @@ function App() {
 
       spotify.getMyTopArtists({ limit: 5, time_range: 'short_term' }).then((response) =>
         dispatch({
-          type: "SET_TOP_ARTISTS",
-          top_artists: response,
+          type: "SET_TOP_ARTISTS_SHORT",
+          top_artists_short: response,
+        })
+      );
+      spotify.getMyTopArtists({ limit: 5, time_range: 'long_term' }).then((response) =>
+        dispatch({
+          type: "SET_TOP_ARTISTS_LONG",
+          top_artists_long: response,
         })
       );
       spotify.getMyTopTracks({ limit: 5, time_range: 'long_term' }).then((response) =>
         dispatch({
-          type: "SET_TOP_TRACKS",
-          top_artists: response,
+          type: "SET_TOP_TRACKS_LONG",
+          top_artists_long: response,
+        })
+      );
+      spotify.getMyTopTracks({ limit: 5, time_range: 'short_term' }).then((response) =>
+        dispatch({
+          type: "SET_TOP_TRACKS_SHORT",
+          top_artists_short: response,
         })
       );
 

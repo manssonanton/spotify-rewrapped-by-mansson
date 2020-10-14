@@ -1,33 +1,72 @@
-.user{
-    background-color: black;
+.user {
+    background-color: #191414;
     width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    column-gap: 2%;
-    h3{
-        font-family: 'Roboto', sans-serif;
-        font-size: 100;
-        color: white;
-        font-size: clamp(2rem, 1.5vw, 20rem);
-        margin-bottom: 0;
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+    header{
+        display: flex;
+        flex-direction: row;
+        padding-top: 3vh;
+        span {
+            text-align: center; 
+            float: left;
+            width: 20%;
+            color: #1db954;
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-size: clamp(1rem, 1vw, 50rem);
+        }
+        .bar{
+            background-color: #1db954;
+            width: 85%;
+            height: clamp(1rem, 1vw, 50rem);
+        }
     }
-    p{
-            font-family: 'Roboto', sans-serif;
+
+    .user-details {
+        
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 2%;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 10%;
+        img{
+            width: 90%;
+        }
+        h3 {
+            color: #1db954;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: clamp(2rem, 2vw, 50rem);
+            // margin: 0;
+            text-align: left;
+        }
+        h2 {
+            color: #1db954;
+            font-family: "Roboto", sans-serif;
+            font-weight: 800;
+            font-size: clamp(3rem, 2vw, 50rem);
+            // margin: 0;
+            text-align: left;
+        }
+        p {
+            font-family: "Roboto", sans-serif;
             font-size: 100;
             color: pink;
             font-size: clamp(1rem, 1vw, 20rem);
             // margin: 0;
-        
-    }
-    h1{
-        color: greenyellow;
-        margin: -5vw;
-        font-family: 'Roboto', sans-serif;
-        font-size: 700;
-        font-size: clamp(5rem, 15vw, 50rem);
-        // transform: translateY(-40%);
-        // letter-spacing: -0.1em;
-        // opacity: 0.75;
+        }
+        h1 {
+            color: #1db954;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: clamp(1rem, 2vw, 50rem);
+            margin: 0;
+            text-align: left;
+        }
     }
 }

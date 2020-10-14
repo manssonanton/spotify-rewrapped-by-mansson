@@ -1,75 +1,87 @@
 import { findAllByDisplayValue } from "@testing-library/react";
 
 export const initialState = {
-  user: null,
-  playlists: [],
-  spotify: null,
-  discover_weekly: null,
-  top_artists: null,
-  top_tracks: null,
-  playing: false,
-  item: null,
+    user: null,
+    playlists: [],
+    spotify: null,
+    discover_weekly: null,
+    top_artists_short: null,
+    top_artists_long: null,
+    top_tracks_short: null,
+    top_tracks_long: null,
+    playing: false,
+    item: null,
 };
 
 const reducer = (state, action) => {
-  console.log(action);
-  switch (action.type) {
-    case "SET_USER":
-      return {
-        ...state,
-        user: action.user,
-      };
+    console.log(action);
+    switch (action.type) {
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.user,
+            };
 
-    case "SET_PLAYING":
-      return {
-        ...state,
-        playing: action.playing,
-      };
+        case "SET_PLAYING":
+            return {
+                ...state,
+                playing: action.playing,
+            };
 
-    case "SET_ITEM":
-      return {
-        ...state,
-        item: action.item,
-      };
+        case "SET_ITEM":
+            return {
+                ...state,
+                item: action.item,
+            };
 
-    case "SET_DISCOVER_WEEKLY":
-      return {
-        ...state,
-        discover_weekly: action.discover_weekly,
-      };
+        case "SET_DISCOVER_WEEKLY":
+            return {
+                ...state,
+                discover_weekly: action.discover_weekly,
+            };
 
-    case "SET_TOP_ARTISTS":
-      return {
-        ...state,
-        top_artists: action.top_artists,
-      };
+        case "SET_TOP_ARTISTS_SHORT":
+            return {
+                ...state,
+                top_artists_short: action.top_artists_short,
+            };
+        case "SET_TOP_ARTISTS_LONG":
+            return {
+                ...state,
+                top_artists_long: action.top_artists_long,
+            };
 
-      case "SET_TOP_TRACKS":
-      return {
-        ...state,
-        top_artists: action.top_tracks,
-      };
+        case "SET_TOP_TRACKS_SHORT":
+            return {
+                ...state,
+                top_tracks_short: action.top_tracks_short,
+            };
+        case "SET_TOP_TRACKS_LONG":
+            return {
+                ...state,
+                top_tracks_long: action.top_tracks_long,
+            };
 
-    case "SET_TOKEN":
-      return {
-        ...state,
-        token: action.token,
-      };
+        case "SET_TOKEN":
+            return {
+                ...state,
+                token: action.token,
+            };
 
-    case "SET_SPOTIFY":
-      return {
-        ...state,
-        spotify: action.spotify,
-      };
+        case "SET_SPOTIFY":
+            return {
+                ...state,
+                spotify: action.spotify,
+            };
 
-    case "SET_PLAYLISTS":
-      return {
-        ...state,
-        playlists: action.playlists,
-      };
-    default:
-      return state;
-  }
+        case "SET_PLAYLISTS":
+            return {
+                ...state,
+                playlists: action.playlists,
+            };
+        default:
+            return state;
+    }
 };
 
 export default reducer;

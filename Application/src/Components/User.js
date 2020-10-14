@@ -6,12 +6,15 @@ function User({ spotify }) {
     const [{ user }, dispatch] = useStateValue();
     return (
         <div className="user">
-            <h1>Who are you?</h1>
-            <div className="user_details">
+            <header>
+                <span>Spotify rewrapped by Anton</span>
+                <div className="bar"></div>
+            </header>
+            <div className="user-details">
                 <div className="left">
-                    <h2>{user?.display_name}</h2>
-                    <h3>Followers: {user?.followers.total}</h3>
-                    <h3>{user?.product}</h3>
+                    <h2>Welcome {user?.display_name}</h2>
+                    <h2>You currently have {user?.followers.total} followers on Spotify.</h2>
+                    <h2>You are a {user?.product} user and here is your music year.</h2>
                     <a href={user?.external_urls.spotify}>Link to spotify profile</a>
                 </div>
                 <div className="right">
