@@ -11,6 +11,7 @@ export const initialState = {
     top_tracks_long: null,
     playing: false,
     item: null,
+    scrollnumber: 1
 };
 
 const reducer = (state, action) => {
@@ -78,6 +79,17 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 playlists: action.playlists,
+            };
+
+        case "SCROLL_DOWN":
+            return {
+                ...state,
+                scrollnumber: action.scrollnumber,
+            };
+        case "SCROLL_UP":
+            return {
+                ...state,
+                scrollnumber: action.scrollnumber,
             };
         default:
             return state;

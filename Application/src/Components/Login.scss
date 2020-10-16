@@ -66,19 +66,25 @@
         margin-left: -7vw;
         float: left;
     }
+    a{
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color: #1DB954;
+        padding: 1.5rem;
+        // background-color: #1DB954;
+        border: 2px solid #1DB954;
+        border-radius: 5rem;
+        font-size: clamp(1rem, 1.5vh, 20rem);
+        font-weight: 700;
+        margin-top: 30vh;
+        transition: 0.4s ease;
+        &:hover{
+            background-color: #0d572760; 
+            // color: #000000;
+        }
+    }
 }
-a{
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    color: #191414;
-    padding: 1.5rem;
-    background-color: #1DB954;
-    border-radius: 5rem;
-    font-size: clamp(1rem, 2vh, 20rem);
-    font-weight: 700;
-    max-width: 40%;
-    margin-top: 20vh;
-}
+
 
 @media only screen and (max-width: 600px) {
     .login{
@@ -134,18 +140,19 @@ a{
             margin-left: 0;
             float: left;
         }
+        a{
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            color: #1DB954;
+            padding: 1.5rem;
+            border: 2px solid #1DB954;
+            border-radius: 5rem;
+            font-size: clamp(1rem, 2vh, 20rem);
+            font-weight: 700;
+            max-width: 40%;
+            margin-top: 20vh;
+        }
     }
-    a{
-        font-family: 'Roboto', sans-serif;
-        text-decoration: none;
-        color: #191414;
-        padding: 1.5rem;
-        background-color: #1DB954;
-        border-radius: 5rem;
-        font-size: clamp(1rem, 2vh, 20rem);
-        font-weight: 700;
-        max-width: 40%;
-        margin-top: 20vh;
-    }
+
     
   }

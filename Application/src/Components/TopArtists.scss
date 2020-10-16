@@ -1,47 +1,45 @@
-li{
-    list-style: none;
 
-}
-.topArtists{
-    background-color: #88cea8;
+.topArtists {
+    background-color: #85c09f;
     width: 100%;
     height: 100vh;
-    // text-align: center;
-    color: #b7f046;
-
-    header{
+    color: #bfff40;
+    font-size: clamp(3rem, 3vw, 10rem);
+    h2{
+        padding: 3vw;
+        margin-top: 0;
+        font-size: clamp(3rem, 3vw, 10rem);
+    }
+    h3{
+        // padding: 3vw;
+        margin: 0;
+        // transform: translateY(-20vh);
+        font-size: clamp(3rem, 8vw, 20rem);
+    }
+    .artist {
+        list-style: none;
+        padding: 0.5rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    .artist-details{
+        width: 80%;
+        margin: 0 auto;
         display: flex;
         flex-direction: row;
-        padding-top: 5vh;
-        span {
-            text-align: center;
-            float: left;
-            width: 40%;
-            margin: 0;
-            font-family: "Roboto", sans-serif;
-            font-weight: 700;
-            font-size: clamp(1rem, 3vw, 50rem);
-        }
-        .bar{
-            width: 85%;
-            height: clamp(1rem, 3vw, 50rem);
-            background-color: #b7f046;
-        }
-    }
-    font-size: 3rem;
-.artist-details{
-    flex-direction: column;
-    display: flex;
-}
-    .artist-card{
-        text-align: left;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        
-        img{
-            max-width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        img {
+            width: 70%;
         }
     }
 
+    // .artist-card {
+    //     text-align: left;
+    //     display: flex;
+    //     justify-content: center;
+    //     flex-direction: column;
+
+
+    // }
 }

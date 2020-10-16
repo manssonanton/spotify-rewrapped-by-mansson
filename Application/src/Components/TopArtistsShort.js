@@ -5,40 +5,28 @@ import './TopArtists.scss';
 function TopArtistsShort() {
     const [{ top_artists_short, top_tracks_short }, dispatch] = useStateValue();
 
-    // const artists = top_artists_short.items.map((artist) => {
-
-    //     return (
-    //         <ArtistList artist={artist} />
-    //     );
-    // });
-
     return (
         <div className="topArtists">
-            {/* <header>
-                <span>Past Month</span>
-                <div className="bar"></div>
-            </header> */}
-            <div >
+            <h2>Top Artists last month</h2>
                 <div className="artist-details">
-                    <h2>Top Artists</h2>
-                    {top_artists_short?.items.map((item) => (
-                        <ArtistList key={item.id} artist={item} />
-                    ))}
+                
+                    <div className="best-artist">
+                        <img src={top_artists_short?.items[0].images[0].url}></img>
+                        <h3>{top_artists_short?.items[0].name}</h3>
+                    </div>
+                    <div className="Honerable mentions">
+                        {top_artists_short?.items.map((item) => (
+                            <ArtistList key={item.id} artist={item} />
+                        ))}
+                    </div>
                 </div>
-                <div className="tracks-details">
-                    <h2>Top Tracks</h2>
-                    {top_tracks_short?.items.map((item) => (
-                        <ArtistList key={item.id} artist={item} />
-                    ))}
-                </div>
-            </div>
         </div>
     );
 }
 
 
 function ArtistList(artist) {
-    console.log(artist.artist);
+    // console.log(artist.artist);
     return (
         <li className="artist">
             <div className="artist-card">
