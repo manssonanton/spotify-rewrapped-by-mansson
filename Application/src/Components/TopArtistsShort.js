@@ -8,18 +8,23 @@ function TopArtistsShort() {
     return (
         <div className="topArtists">
             <h2>Top Artists last month</h2>
-                <div className="artist-details">
-                
-                    <div className="best-artist">
-                        <img src={top_artists_short?.items[0].images[0].url}></img>
-                        <h3>{top_artists_short?.items[0].name}</h3>
-                    </div>
-                    <div className="Honerable mentions">
-                        {top_artists_short?.items.map((item) => (
-                            <ArtistList key={item.id} artist={item} />
-                        ))}
+            <div className="artist-details">
+
+                <div className="best-artist">
+                    <div className="image-details">
+                        <img src={top_artists_short?.items[4].images[0].url} className="image-4"></img>
+                        <img src={top_artists_short?.items[3].images[0].url} className="image-3"></img>
+                        <img src={top_artists_short?.items[2].images[0].url} className="image-2"></img>
+                        <img src={top_artists_short?.items[1].images[0].url} className="image-1"></img>
+                        <img src={top_artists_short?.items[0].images[0].url} className="image-0"></img>
                     </div>
                 </div>
+                <div className="Honerable-mentions">
+                    {top_artists_short?.items.map((item) => (
+                        <ArtistList key={item.id} artist={item} />
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }
@@ -29,11 +34,8 @@ function ArtistList(artist) {
     // console.log(artist.artist);
     return (
         <li className="artist">
-            <div className="artist-card">
                 {/* <img src={artist.artist.images[0].url}></img> */}
                 {artist.artist.name}
-            </div>
-
         </li>
     );
 }
