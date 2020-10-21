@@ -1,14 +1,17 @@
 .wrapped{
     width: 100%;
+    
     .components{
         display: grid;
         grid-template-rows: 100vh 100vh 100vh;
         margin: 0 auto;
+        z-index: 1;
     }
     a:hover{
         cursor: pointer;
     }
     .logo{
+        z-index: 10;
         position: fixed;
         top: 0;
         padding: 3vh;
@@ -23,6 +26,7 @@
         }
     }
     .scroll{
+        z-index: 10;
         position: fixed;
         bottom: 0;
         padding: 3vh;
@@ -45,6 +49,7 @@
         }
     }
     .socialMedia{
+        z-index: 10;
         position: fixed;
         bottom: 0;
         right: 0;
