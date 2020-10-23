@@ -55,13 +55,13 @@ function App() {
       spotify.getMyTopTracks({ limit: 5, time_range: 'long_term' }).then((response) =>
         dispatch({
           type: "SET_TOP_TRACKS_LONG",
-          top_artists_long: response,
+          top_tracks_long: response,
         })
       );
       spotify.getMyTopTracks({ limit: 5, time_range: 'short_term' }).then((response) =>
         dispatch({
           type: "SET_TOP_TRACKS_SHORT",
-          top_artists_short: response,
+          top_tracks_short: response,
         })
       );
 

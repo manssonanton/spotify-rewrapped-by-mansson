@@ -4,7 +4,7 @@ import './TopArtists.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 function TopArtistsShort() {
-    const [{ top_artists_short, top_tracks_short }, dispatch] = useStateValue();
+    const [{ top_artists_short }] = useStateValue();
 
     return (
         <ScrollAnimation delay={100}

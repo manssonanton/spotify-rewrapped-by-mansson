@@ -4,7 +4,7 @@ import './User.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 function User({ spotify }) {
-    const [{ user }, dispatch] = useStateValue();
+    const [{ user }] = useStateValue();
     return (
         <div className="user">
             <div className="user-details">

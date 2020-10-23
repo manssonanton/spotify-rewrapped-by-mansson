@@ -4,7 +4,7 @@ import TopArtistsShort from './TopArtistsShort'
 import TopTracksShort from './TopTracksShort'
 import './Wrapped.scss';
 import { useStateValue } from "./StateProvider";
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Element, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import GitHubIcon from '@material-ui/icons/GitHub';
