@@ -1,9 +1,20 @@
 import React from 'react';
+import { useStateValue } from "./StateProvider";
+import './NewReleases.scss';
+import ScrollAnimation from 'react-animate-on-scroll';
 
-function Wrapped() {
+function NewReleases() {
+    const [{ top_artists_short }] = useStateValue();
+
     return (
-        <h1>Logged in as me</h1>
+            <div className="commingSoon">
+                <ScrollAnimation
+                    animateIn='fadeIn'
+                    initiallyVisible={false}>
+                    <h2>More comming soon...</h2>
+                </ScrollAnimation>
+            </div>
     );
 }
-export default Wrapped;
+export default NewReleases;
 

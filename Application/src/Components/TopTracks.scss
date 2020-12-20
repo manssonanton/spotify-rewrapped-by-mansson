@@ -1,26 +1,89 @@
 .topTracks {
-    background-color: #e4df9a;
+    background-color: #d97ce6;
     width: 100%;
     height: 100vh;
-    .topTracks {
+    color: #310e52;
+    font-size: clamp(3rem, 3vw, 10rem);
+    h2{
+        padding: 3vw;
+        margin-top: 0;
+        font-size: clamp(3rem, 5vw, 10rem);
+        float: right;
     }
-    .tracks-details {
-        width: 80%;
-        margin: 0 auto;
-        padding-top: 5vh;
-    }
-    li {
+    .artist {
         list-style: none;
-        display: flex;
-        margin: 0;
-        align-items: center;
-        font-size: clamp(3rem, 3vw, 10rem);
-        p {
+        padding: 0.5rem;
+        font-size: clamp(3rem, 2.5vw, 10rem);
+        font-weight: 700;
+        text-align: left;
+        p{
             margin: 0;
         }
-        img {
-            max-width: 9vw;
-            max-height: 9vw;
-        }
     }
-}
+    .artist-details{
+        width: 80%;
+        // margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        .image-details{
+            transform: translate(-160px, -120px);
+            img {
+                width: 20vw;
+                position: absolute;
+            }
+            
+            .image-0{
+                
+                // width: 280px;
+                z-index: 1;
+                &:hover{
+                    // z-index: 3;
+                    // animation: fronte 1s linear forwards; 
+                }
+            }
+            .image-1{
+                transform: translate(-40px, -30px);
+                // width: 280px;
+                z-index: 1;
+                &:hover{
+                    z-index: 3;
+                    animation: fronte 0.4s ease-in-out; 
+                }
+            }
+            .image-2{
+                transform: translate(-80px, -60px);
+                z-index: 1;
+                &:hover{
+                    z-index: 3;
+                    animation: fronte 0.4s ease-in-out; 
+                }
+            }
+            .image-3{
+                transform: translate(-120px, -90px);
+                z-index: 1;
+                &:hover{
+                    z-index: 3;
+                    animation: fronte 0.4s ease-in-out; 
+                }
+            }
+            .image-4{
+                transform: translate(-160px, -120px);
+                z-index: 1;
+                transition: ease-in-out 0.4s;
+                &:hover{
+                    z-index: 3;
+                    animation: fronte 0.4s ease-in-out; 
+                }
+            }
+        }
+
+    }
+    @keyframes fronte {
+        from { z-index: 1; opacity: 0.9; }
+        to { z-index: 4;  opacity: 1; }
+      }
+
+    }
